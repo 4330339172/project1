@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\vsproject\\day1\\day1.csproj": {}
+    "D:\\alavonia\\day1\\day1.csproj": {}
   },
   "projects": {
-    "D:\\vsproject\\day1\\day1.csproj": {
+    "D:\\alavonia\\day1\\day1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\vsproject\\day1\\day1.csproj",
+        "projectUniqueName": "D:\\alavonia\\day1\\day1.csproj",
         "projectName": "day1",
-        "projectPath": "D:\\vsproject\\day1\\day1.csproj",
+        "projectPath": "D:\\alavonia\\day1\\day1.csproj",
         "packagesPath": "C:\\Users\\许\\.nuget\\packages\\",
-        "outputPath": "D:\\vsproject\\day1\\obj\\",
+        "outputPath": "D:\\alavonia\\day1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\许\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,23 +42,23 @@
           "dependencies": {
             "Avalonia": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "(, )"
             },
             "Avalonia.Diagnostics": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "(, )"
             },
             "Avalonia.Fonts.Inter": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "(, )"
             },
             "Avalonia.ReactiveUI": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "(, )"
             },
             "Avalonia.Themes.Fluent": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "(, )"
             }
           },
           "imports": [
