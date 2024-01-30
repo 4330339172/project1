@@ -1,0 +1,156 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:controls="clr-namespace:test"
+             xmlns:vm="clr-namespace:test.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="test.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+
+	<Grid RowDefinitions="auto,*,auto">
+		<!--第一大行-->
+		<Grid Grid.Row="0" ColumnDefinitions="Auto,auto,*,auto,auto" Background="#e5e5e5" Height="40">
+			<Grid.Styles>
+				<Style Selector="Button">
+					<Setter Property="Background" Value="Transparent"></Setter>
+				</Style>
+				<Style Selector="Button Image">
+					<Setter Property="Width" Value="40"></Setter>
+				</Style>
+				<Style Selector="Button/template/ContentPresenter">
+					<Setter Property="Transitions" >
+						<Transitions>
+							<TransformOperationsTransition Property="RenderTransform" Duration=" 0:0:0.2"></TransformOperationsTransition>
+						</Transitions>
+					</Setter>
+				</Style>
+				<Style Selector="Button:pointerover/template/ContentPresenter">
+					<Setter Property="Background" Value="Transparent"></Setter>
+					<Setter Property="RenderTransform" Value="scale(1.3)"></Setter>
+					<Setter Property="Opacity" Value="0.6"></Setter>
+				</Style>
+			</Grid.Styles>
+			
+			<Button Grid.Column="0" Background="#e5e5e5" Width="50" Height="50">
+				<Image Source="D:\alavonia\day3\test\Assets\phtoto2.png"/>
+			</Button>
+			<Button Grid.Column="1" Background="#e5e5e5" Width="50" Height="50">
+				<Image Source="D:\alavonia\day3\test\Assets\phtoto1.png"/>
+			</Button>
+			<StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2">
+				<Label FontWeight="Black">AVALONIA</Label>
+				<Label >LOUNDNESS METER</Label>
+			</StackPanel>
+			<Button Grid.Column="3" Background="#e5e5e5" Width="50" Height="50">
+				<Image Source="D:\alavonia\day3\test\Assets\phtoto3.png"/>
+			</Button>
+			<Button Grid.Column="4" Background="#e5e5e5" Width="50" Height="50">
+				<Image Source="D:\alavonia\day3\test\Assets\phtoto4.png"/>
+			</Button>
+		</Grid>
+		<!--第二大行-->
+		<Grid Grid.Row="1" ColumnDefinitions="auto,auto,*" Background="Black">
+			<!--第二大行第一列-->
+			<Grid Grid.Column="0" Width="150" Background="Black" RowDefinitions="*,auto,auto" Margin="0,2">
+				<!--第二大行第一列第一行-->
+				<Grid Grid.Row="0"
+					  RowDefinitions="3*,3*,3*,9*,5*,4*,9*,9*,9*,6*,auto"
+					  ColumnDefinitions="auto,*,auto,auto"
+					  Margin="10,0"
+					  >
+
+					<Grid.Styles>
+						<Style Selector="Label">
+							<Setter Property="Foreground" Value="White"></Setter>
+							<Setter Property="FontSize" Value="12"></Setter>
+							<Setter Property="HorizontalAlignment" Value="Right"></Setter>
+							<Setter Property="Padding" Value="0"></Setter>
+						</Style>
+					</Grid.Styles>
+
+					<Label Grid.Row="0" Grid.Column="0">0-</Label>
+					<Label Grid.Row="1" Grid.Column="0">-3-</Label>
+					<Label Grid.Row="2" Grid.Column="0">-6-</Label>
+					<Label Grid.Row="3" Grid.Column="0">-9-</Label>
+					<Label Grid.Row="4" Grid.Column="0">-18-</Label>
+					<Label Grid.Row="5" Grid.Column="0">-23-</Label>
+					<Label Grid.Row="6" Grid.Column="0">-27-</Label>
+					<Label Grid.Row="7" Grid.Column="0">-36-</Label>
+					<Label Grid.Row="8" Grid.Column="0">-45-</Label>
+					<Label Grid.Row="9" Grid.Column="0">-54-</Label>
+					<Label Grid.Row="10" Grid.Column="0"></Label>
+
+					<Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="11" Width="20" RowDefinitions="26*,37*">
+						<Rectangle Grid.Row="0" Margin="0,10,0,-10"  Canvas.Top="0" Fill="#b05c4e" Width="20"></Rectangle>
+						<Rectangle Grid.Row="2" Margin="0,-5,0,0"  Canvas.Top="0" Fill="White" Width="20"></Rectangle>
+					</Grid>
+
+
+
+					<Label Grid.Row="0" Grid.Column="2">-</Label>
+					<Label Grid.Row="1" Grid.Column="2">-</Label>
+					<Label Grid.Row="2" Grid.Column="2">-</Label>
+					<Label Grid.Row="3" Grid.Column="2">-</Label>
+					<Label Grid.Row="4" Grid.Column="2">-</Label>
+					<Label Grid.Row="5" Grid.Column="2">-</Label>
+					<Label Grid.Row="6" Grid.Column="2">-</Label>
+					<Label Grid.Row="7" Grid.Column="2">-</Label>
+					<Label Grid.Row="8" Grid.Column="2">-</Label>
+					<Label Grid.Row="9" Grid.Column="2">-</Label>
+					<Label Grid.Row="10" Grid.Column="2"></Label>
+
+					<Canvas Grid.Column="3" Grid.Row="0"  Grid.RowSpan="11" Width="20">
+						<Rectangle Canvas.Top="0" Fill="White" Width="20" Height="20"></Rectangle>
+					</Canvas>
+
+				</Grid>
+				<!--第二大行第一列第二行-->
+				<Label Grid.Row="1" Foreground="White" HorizontalAlignment="Center" Margin="0,1" FontSize="20">LUFS</Label>
+				<!--第二大行第一列第三行-->
+				<StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" >
+					<Button Classes="small" >
+						<Image Width="20"  Source="D:\alavonia\day3\test\Assets\phtoto5.png"/>
+					</Button>
+					<Button Classes="small">INT-LPA</Button>
+				</StackPanel>
+			</Grid>
+			
+			<!--第二大行第二列-->
+			<StackPanel Grid.Column="1" Background="Black" Width="170" Margin="0,15,10,15">
+				<controls:TemplatedControl1 Largetext="123" Smalltext="456"></controls:TemplatedControl1>
+				<controls:TemplatedControl1 Background="Red"></controls:TemplatedControl1>
+				<controls:TemplatedControl1></controls:TemplatedControl1>
+				<controls:TemplatedControl1></controls:TemplatedControl1>
+				<controls:TemplatedControl1></controls:TemplatedControl1>
+				<controls:TemplatedControl1></controls:TemplatedControl1>
+				<controls:TemplatedControl1></controls:TemplatedControl1>
+				<controls:TemplatedControl1></controls:TemplatedControl1>
+			
+				<StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" >
+					<Button Classes="small" >
+						<Image Width="20"  Source="D:\alavonia\day3\test\Assets\phtoto5.png"/>
+					</Button>
+					<Button Classes="small">INT-LPA</Button>
+				</StackPanel>
+			</StackPanel>
+
+			<!--第二大行第三列-->
+			<Rectangle Grid.Column="2" Fill="Red" ></Rectangle>
+		</Grid>
+		<!--第三大行-->
+		<Grid Grid.Row="2" Margin="8" ColumnDefinitions="auto,auto,*,auto,auto,auto,auto,auto" >
+			<Button Grid.Column="0">Stereo</Button>
+			<Button Grid.Column="1" Margin="4,0,0,0">YouTube</Button>
+			<Button Grid.Column="3">10Sec</Button>
+			<Button Grid.Column="4">Continue</Button>
+			<Button Grid.Column="5"  Background="Orange" Height="30" Width="30"></Button>
+			<Button Grid.Column="6"  Background="Orange" Height="30" Width="30"></Button>
+		</Grid>
+	</Grid>
+</UserControl>
