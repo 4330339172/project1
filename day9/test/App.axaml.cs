@@ -6,7 +6,7 @@ using test.ViewModels;
 using test.Views;
 
 namespace test;
-
+//code
 public partial class App : Application
 {
     public override void Initialize()
