@@ -13,22 +13,7 @@
     <vm:MainViewModel />
   </Design.DataContext>
 
-	<Grid RowDefinitions="auto,*,auto" Name="MainGrid">
-
-		<!-- Channel Configuration Popup-->
-		<Border Grid.Row="0" 
-				Name="ChannelConfigurationPopup"
-				Grid.RowSpan="3" 
-				Background="red" 
-				ZIndex="1" 
-				Opacity="0.5" 
-				HorizontalAlignment="Left"
-				VerticalAlignment="Bottom"
-				Margin="10,0,0,10"
-				>
-			<Label>test</Label>
-		</Border>
-		
+	<Grid RowDefinitions="auto,*,auto" Background="White" Name="MainGrid">
 		<!--第一大行-->
 		<Grid Grid.Row="0" ColumnDefinitions="Auto,auto,*,auto,auto" Background="#e5e5e5" Height="40">
 			<Grid.Styles>
@@ -63,7 +48,7 @@
 				<Label >LOUNDNESS METER</Label>
 			</StackPanel>
 			<Button Grid.Column="3" Background="#e5e5e5" Width="50" Height="50">
-				<Image Source="D:\alavonia\day3\test\Assets\phtoto3.png"/>
+				<Image Source="D:\alavonia\day3\test\Assets\phtoto3.png"/>0
 			</Button>
 			<Button Grid.Column="4" Background="#e5e5e5" Width="50" Height="50">
 				<Image Source="D:\alavonia\day3\test\Assets\phtoto4.png"/>
@@ -71,6 +56,7 @@
 		</Grid>
 		<!--第二大行-->
 		<Grid Grid.Row="1" ColumnDefinitions="auto,auto,*" Background="Black">
+			
 			<!--第二大行第一列-->
 			<Grid Grid.Column="0" Width="150" Background="Black" RowDefinitions="*,auto,auto" Margin="0,2">
 				<!--第二大行第一列第一行-->
@@ -163,8 +149,8 @@
 			<Rectangle Grid.Column="2" Fill="Red" ></Rectangle>
 		</Grid>
 		<!--第三大行-->
-		<Grid Grid.Row="2" Margin="8" ColumnDefinitions="auto,auto,*,auto,auto,auto,auto,auto">
-			<Button Grid.Column="0"  Name="ChannelConfigurationButton" Command="{Binding ChannelConfigurationButtonPressedCommand}">Stereo</Button>
+		<Grid Grid.Row="2" Margin="8" ColumnDefinitions="auto,auto,*,auto,auto,auto,auto,auto" >
+			<Button Grid.Column="0" Name="ChannelConfigurationButton" Command="{Binding Path={MainViewModel}.ChannelConfigurationButtonPressedCommand}">Stereo</Button>
 			<Button Grid.Column="1" Margin="4,0,0,0">YouTube</Button>
 			<Button Grid.Column="3">10Sec</Button>
 			<Button Grid.Column="4">Continue</Button>

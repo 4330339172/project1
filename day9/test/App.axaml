@@ -1,0 +1,21 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="test.App"
+             RequestedThemeVariant="Default">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.Styles>
+        <FluentTheme />
+		<StyleInclude Source="/TemplatedControl1.axaml"></StyleInclude>
+    </Application.Styles>
+
+	<Application.Resources>
+		<SolidColorBrush x:Key="LightBlueBrush">#606875</SolidColorBrush>
+		<SolidColorBrush x:Key="MidGreyBrush">#e5e5e5</SolidColorBrush>
+		<SolidColorBrush x:Key="MidBlueBrush">#373c44</SolidColorBrush>
+		<SolidColorBrush x:Key="DarkBlueBrush">#1a1c20</SolidColorBrush>
+		<SolidColorBrush x:Key="FadeRedBrush">#bc7c7a</SolidColorBrush>
+		<SolidColorBrush x:Key="BrightBlueBrush">#7f98c7</SolidColorBrush>
+	</Application.Resources>
+
+</Application>

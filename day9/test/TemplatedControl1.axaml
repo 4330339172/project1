@@ -1,0 +1,44 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:test">
+  <Design.PreviewWith>
+	  <Border Background="{DynamicResource ResourceKey=MidBuleBrush}">
+	  <StackPanel >
+		 <controls:TemplatedControl1 />
+		 <controls:TemplatedControl1 Classes="button" />
+	  </StackPanel>
+	  </Border>
+  </Design.PreviewWith>
+
+  <Style Selector="controls|TemplatedControl1">
+    <!-- Set Defaults -->
+	  <Setter Property="Foreground" Value="White"></Setter>
+	  <Setter Property="Background" Value="{DynamicResource ResourceKey=MidBlueBrush}"></Setter>
+	  
+    <Setter Property="Template">
+      <ControlTemplate>
+		  <Border Padding="7,3" Background="{TemplateBinding Property=Background}">
+			  <StackPanel>
+		      <Label Content="{TemplateBinding Property=Largetext}" FontSize="21"  HorizontalAlignment="Center" Padding="0"/>
+		      <Label Content="{TemplateBinding Property=Smalltext}" FontSize="11" HorizontalAlignment="Center" Padding="0"/>
+			  </StackPanel>
+		    </Border>
+	    </ControlTemplate>
+    </Setter>
+  </Style>
+
+	<Style Selector="controls|TemplatedControl1.button">
+		<!-- Set Defaults -->
+		<Setter Property="Foreground" Value="White"></Setter>
+		<Setter Property="Background" Value="{DynamicResource ResourceKey=MidBlueBrush}"></Setter>
+
+		<Setter Property="Template">
+			<ControlTemplate>
+					<StackPanel>
+						<Label Content="{TemplateBinding Property=Largetext}" Background="{DynamicResource ResourceKey=MidBlueBrush}" CornerRadius="20" FontSize="21"  HorizontalAlignment="Center" Padding="0"/>
+						<Label Content="{TemplateBinding Property=Smalltext}"  FontSize="11" HorizontalAlignment="Center" Padding="0"/>		
+					</StackPanel>
+			</ControlTemplate>
+		</Setter>
+	</Style>
+</Styles>

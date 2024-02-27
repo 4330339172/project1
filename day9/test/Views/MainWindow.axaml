@@ -8,6 +8,7 @@
         x:Class="test.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="test">
+        <views:MainView />
 	<Window.Styles>
 		<Style Selector="Button.small">
 			<Setter Property="FontSize" Value="12"/>
@@ -23,5 +24,4 @@
 			<Setter Property="TextBlock.Foreground" Value="White"></Setter>
 		</Style>
 	</Window.Styles>
-	<views:MainView />
 </Window>
